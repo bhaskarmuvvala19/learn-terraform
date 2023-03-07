@@ -1,4 +1,4 @@
-data "aws_ami" "ami" {
+data "aws_ami" "amii" {
   most_recent      = true
   name_regex       = "Centos-8-DevOps-Practice"
   owners           = ["084055491950"]
@@ -6,5 +6,5 @@ data "aws_ami" "ami" {
 
 }
 output "ami_id" {
-  value = data.aws_ami.ami.image_id
+  value = data.aws_ami.amii.image_id
 }
