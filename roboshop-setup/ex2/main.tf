@@ -1,4 +1,4 @@
-data "aws_ami" "ami" {
+data "aws_ami" "amiii" {
   most_recent = true
   name_regex  = "Centos-8-DevOps-Practice"
   owners      = ["084055491950"]
@@ -7,7 +7,7 @@ data "aws_ami" "ami" {
 
 resource "aws_instance" "frontend" {
   count                  = 5
-  ami                    = data.aws_ami.ami.image_id
+  ami                    = data.aws_ami.amiii.image_id
   instance_type          = "t3.micro"
   vpc_security_group_ids = ["sg-0ca9150f91b0e8e5d"]
 }
