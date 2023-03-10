@@ -15,7 +15,7 @@ resource "aws_instance" "ec2" {
 }
 
 resource "aws_route53_record" "record" {
-  zone_id = "Z103214126L48SQW30RSR"
+  zone_id = "Z0150168L6K51XOF8ZF7"
   name    = "${var.component}-dev.devopswithbhaskar.online"
   type    = "A"
   ttl     = 30
